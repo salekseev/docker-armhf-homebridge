@@ -1,24 +1,19 @@
 {
-"bridge": {
-        "name": "Homebridge",
-        "username": "CA:21:3D:E3:CE:30",
+    "bridge": {
+        "name": "RaspberryPi",
+        "username": "CC:22:3D:E3:CE:30",
         "port": 51826,
         "pin": "031-45-154"
     },
-"platforms": [
+
+    "description": "This is an example configuration file with one fake accessory and one fake platform. You can use this as a template for creating your own configuration file containing devices you actually own.",
+
+    "platforms": [
         {
-            "platform":"MiLight",
-            "name":"MiLight",
-            "bridges": [
-              {
-                "ip_address": "10.0.1.25",
-                "version": "v2",
-                "lights": {
-                           "rgbw": ["Living Room"]},
-                "repeat": 1,
-                "delay": 100
-              }
-            ]
+            "platform": "ZWayServer",
+            "url": "http://192.168.1.100:8083/",
+            "login": "[admin]",
+            "password": "[password]"
         }
-]
+    ]
 }
